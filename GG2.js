@@ -392,7 +392,7 @@
 				yellowFrom:75, yellowTo: 90,
 				minorTicks: 5,
 					animation:{
-          duration: 5000,
+          duration: 1000,
           easing: 'inAndOut',
         },
 				};
