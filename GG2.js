@@ -376,7 +376,7 @@
 				console.log("props =", props)
 				var data = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				[props.label, 0]
+				[props.label, props.value_old]
 				]);
 
 				var options = {
@@ -399,7 +399,7 @@
 
 				var chart = new google.visualization.Gauge(ctx);
 				chart.draw(data, options);
-                                data.setValue(0,1,50);
+                                data.setValue(0,1,props.value_new);
 				chart.draw(data, options);
 			}
 		}
