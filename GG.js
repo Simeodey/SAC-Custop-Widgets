@@ -388,8 +388,8 @@
 					position: 'top'
 					},
 					width: '100%',
-				redFrom: props.redFrom, redTo: props.redTo,
-				yellowFrom:props.yellowFrom, yellowTo: props.yellowTo,
+				redFrom: 90, redTo: 100,
+				yellowFrom:75, yellowTo: 90,
 				minorTicks: 5
 				};
 
