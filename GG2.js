@@ -399,7 +399,7 @@
 
 				var chart = new google.visualization.Gauge(ctx);
 				chart.draw(data, options);
-                                data.setValue(0,1,5);
+                                data.setValue(0,1,50);
 				chart.draw(data, options);
 			}
 		}
