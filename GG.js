@@ -398,7 +398,7 @@
 				};
 
 				var chart = new google.visualization.Gauge(ctx);
-                                data.setValue(0,1,80);
+                                data.setValue(0,1,props.value);
 				chart.draw(data, options);
 			}
 		}
