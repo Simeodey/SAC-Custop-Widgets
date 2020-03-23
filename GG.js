@@ -391,6 +391,10 @@
 				redFrom: 90, redTo: 100,
 				yellowFrom:75, yellowTo: 90,
 				minorTicks: 5
+					animation:{
+          duration: 1000,
+          easing: 'inAndOut',
+        },
 				};
 
 				var chart = new google.visualization.Gauge(ctx);
