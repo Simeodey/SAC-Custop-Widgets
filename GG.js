@@ -376,7 +376,7 @@
 				console.log("props =", props)
 				var data = google.visualization.arrayToDataTable([
 				['Label', 'Value'],
-				[props.label, props.value]
+				[props.label, 0]
 				]);
 
 				var options = {
