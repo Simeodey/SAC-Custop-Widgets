@@ -392,13 +392,13 @@
 				yellowFrom:75, yellowTo: 90,
 				minorTicks: 5,
 					animation:{
-          duration: 1000,
+          duration: 5000,
           easing: 'inAndOut',
         },
 				};
 
 				var chart = new google.visualization.Gauge(ctx);
-
+                                data.setValue(0,1,80);
 				chart.draw(data, options);
 			}
 		}
