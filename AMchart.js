@@ -8,9 +8,9 @@
     </style>  
     `;
     
-     const amchartscorejs="https://www.amcharts.com/lib/4/core.js";
-     const aamchartschartsjs="https://www.amcharts.com/lib/4/charts.js";
-    const aamchartsanimatedjs="https://www.amcharts.com/lib/4/themes/animated.js";;
+     const amchartscorejs="https://simeodey.github.io/SAC-Custop-Widgets/AMchartlibs/core.js";
+     const aamchartschartsjs="https://simeodey.github.io/SAC-Custop-Widgets/AMchartlibs/charts.js";
+    const aamchartsanimatedjs="https://simeodey.github.io/SAC-Custop-Widgets/AMchartlibs/animated.js";;
     
 
     
