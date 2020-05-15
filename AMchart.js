@@ -97,19 +97,20 @@ class Box extends HTMLElement {
         };
     }
     onCustomWidgetAfterUpdate(changedProperties){
-        console.log("onCustomWidgetBeforeUpdate");
+        console.log("chech1");
         const div = document.createElement('div');
+         console.log("chech2");
                 let divid = changedProperties.widgetName;
                 this._tagContainer = divid;
                 div.innerHTML = '<div id="container_' + divid + '"></div>';
                 shadowRoot.appendChild(div);
-
+ console.log("chech3");
                 const css = document.createElement('div');
                 css.innerHTML = '<style>#container_' + divid + ' {width: 100%; height: 500px;}</style>'
                 shadowRoot.appendChild(css);
-
+ console.log("chech4");
                 var mapcanvas_divstr = shadowRoot.getElementById('container_' + divid);
-                
+                 console.log("chech5");
         async function LoadLibs() {
             try {
                 await loadScript(amchartscorejs);				
@@ -122,6 +123,7 @@ class Box extends HTMLElement {
         
             }
         }
+         console.log("chech6");
         LoadLibs();
         
     }
