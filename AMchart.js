@@ -7,7 +7,17 @@
     
     </style>  
     `;
-    
+    function loadScript(src) {
+        return new Promise(function(resolve, reject) {
+          let script = document.createElement('script');
+          script.src = src;
+  
+          script.onload = () => {console.log("Load: " + src); resolve(script);}
+          script.onerror = () => reject(new Error(`Script load error for ${src}`));
+  
+          shadowRoot.appendChild(script)
+        });
+      }
      const amchartscorejs="https://simeodey.github.io/SAC-Custop-Widgets/AMchartlibs/core.js";
      const aamchartschartsjs="https://simeodey.github.io/SAC-Custop-Widgets/AMchartlibs/charts.js";
     const aamchartsanimatedjs="https://simeodey.github.io/SAC-Custop-Widgets/AMchartlibs/animated.js";;
