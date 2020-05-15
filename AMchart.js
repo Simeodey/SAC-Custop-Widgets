@@ -127,15 +127,17 @@ class Box extends HTMLElement {
         LoadLibs();
         
     }
-
+  console.log("chech7");
     onCustomWidgetDestroy() {
         console.log("onCustomWidgetDestroy");
     }
-
+  console.log("chech7");
 
 
 
 
 }
+   console.log("chech9");
     customElements.define("demo-timeline-amchart", Box);
+  console.log("chech10");
 }());
