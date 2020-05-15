@@ -125,13 +125,13 @@ class Box extends HTMLElement {
         }
          console.log("chech6");
         LoadLibs();
-        
+        console.log("chech7");
     }
-  console.log("chech7");
+ 
     onCustomWidgetDestroy() {
         console.log("onCustomWidgetDestroy");
     }
-  console.log("chech7");
+  
 
 
 
