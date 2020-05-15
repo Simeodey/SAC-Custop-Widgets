@@ -97,6 +97,7 @@ class Box extends HTMLElement {
         };
     }
     onCustomWidgetAfterUpdate(changedProperties){
+        console.log("onCustomWidgetBeforeUpdate");
         const div = document.createElement('div');
                 let divid = changedProperties.widgetName;
                 this._tagContainer = divid;
