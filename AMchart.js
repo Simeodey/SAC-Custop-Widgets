@@ -59,8 +59,8 @@
     marker.cornerRadius(20,20,20,20);
     
     };
-function Draw(div) {
-    Amchart(div)
+function Draw(divid) {
+    Amchart(divid)
 
 };
 class Box extends HTMLElement {
