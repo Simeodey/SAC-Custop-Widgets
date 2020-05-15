@@ -118,7 +118,7 @@ class Box extends HTMLElement {
             } catch (e) {
                 alert(e);
             } finally {
-                Draw(divid, that._firstConnection);
+                Draw(divid);
         
             }
         }
