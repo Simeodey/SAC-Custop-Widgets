@@ -135,7 +135,7 @@ class Box extends HTMLElement {
         
             }
         }
-         console.log("chech6");
+         console.log(divid);
         LoadLibs();
         console.log("chech7");
     }
