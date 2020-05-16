@@ -122,7 +122,7 @@ class Box extends HTMLElement {
                 shadowRoot.appendChild(css);
  console.log("chech4");
                 var mapcanvas_divstr = shadowRoot.getElementById('container_' + divid);
-                 console.log("chech5");
+                 console.log(mapcanvas_divstr);
         async function LoadLibs() {
             try {
                 await loadScript(amchartscorejs);				
