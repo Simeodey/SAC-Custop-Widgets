@@ -44,18 +44,6 @@
             if (typeof (value) === "string") value = new Date(value);
             this.DP.setDateValue(value);
         }
-
-        set format(value) {
-            if (!this.DP) return;
-            this.DP.setDisplayFormat(value);
-        }
-
-        set enablerange(value) {
-            if (value == undefined || !this.DP) return;
-            this._enablerange = value;
-            this.DP.destroy();
-            this.init();
-        }
     }
 
     customElements.define('nkappler-date-picker', DatePicker);
