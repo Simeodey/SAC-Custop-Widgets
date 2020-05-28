@@ -32,7 +32,7 @@
         }
 
         fireChanged() {
-            var properties = { dateVal: this.DP.getDateValue() };
+            var properties = { date: this.DP.getDateValue() };
             if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
@@ -45,12 +45,6 @@
             if (value == undefined || !this.DP) return;
             if (typeof (value) === "string") value = new Date(value);
             this.DP.setDateValue(value);
-        }
-
-        set secondDateVal(value) {
-            if (value == undefined || !this.DP || !this._enablerange) return;
-            if (typeof (value) === "string") value = new Date(value);
-            this.DP.setSecondDateValue(value);
         }
 
         set format(value) {
