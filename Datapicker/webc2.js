@@ -41,7 +41,7 @@
             }));
         }
 
-        set dateVal(value) {
+        set date(value) {
             if (value == undefined || !this.DP) return;
             if (typeof (value) === "string") value = new Date(value);
             this.DP.setDateValue(value);
