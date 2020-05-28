@@ -16,13 +16,12 @@
         
 
         init() {
-            if (this.children.length === 2) return; //constructor called during drag+drop
+            if (this.children.length === 2) return;
             if (!this.querySelector("link")) {
                 this.appendChild(tmpl.content.cloneNode(true));
             }
-            var ctor = sap.m.DatePicker;
-            if (this._enablerange) { ctor = sap.m.DateRangeSelection; }
-            this.DP = new ctor({
+            var dpicker = sap.m.DatePicker;
+            this.DP = new dpicker({
                 change: function () {
                     this.fireChanged();
                     this.dispatchEvent(new Event("onChange"));
@@ -33,7 +32,6 @@
 
         fireChanged() {
             var properties = { date: this.DP.getDateValue() };
-            if (this._enablerange) { properties.secondDateVal = this.DP.getSecondDateValue(); }
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: properties
