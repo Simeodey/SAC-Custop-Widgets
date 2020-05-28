@@ -1,11 +1,25 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-    <style type="text/css">	
-    body {
-
-    }
-    </style>       
+      <link rel="stylesheet" type="text/css" href=".datePicker {
+        margin: 0;
+      }
+      
+      .datePicker .sapMInputBaseContentWrapper {
+        background: transparent;
+        border-color: transparent;
+      }
+      
+      .datePicker .sapMInputBaseContentWrapper:hover,
+      .datePicker .sapMInputBaseContentWrapper:hover,
+      .datePicker .sapMInputBaseIcon:hover {
+        background: rgba(42, 73, 100, .3) !important;
+      }
+      
+      .datePicker .sapMInputBaseInner,
+      .datePicker .sapMInputBaseIcon {
+        color: white;
+      }"/>        
 `;
 
     class DatePicker extends HTMLElement {
