@@ -30,7 +30,8 @@
         }
 
         fireChanged() {
-            var properties = { date: this.DP.getDateValue({ dateFormat: 'yy-mm-dd' }) };
+            var properties = { date: this.DP.getDateValue(),
+                             format: 'yy-mm-dd' };
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: properties
