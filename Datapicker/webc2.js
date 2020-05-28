@@ -1,8 +1,10 @@
 (function () {
     let tmpl = document.createElement('template');
-    tmpl.innerHTML = `body {
+    tmpl.innerHTML = `   <style>	
+    body {
 
     }
+    </style>  
 `;
 
     class DatePicker extends HTMLElement {
