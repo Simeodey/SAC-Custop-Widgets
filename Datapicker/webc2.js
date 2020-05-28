@@ -46,5 +46,5 @@
         }
     }
 
-    customElements.define('datepicker', DatePicker);
+    customElements.define('nkappler-date-picker', DatePicker);
 })();
