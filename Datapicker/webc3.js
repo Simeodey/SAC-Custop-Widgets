@@ -43,7 +43,7 @@
         init() {
             var dpicker = sap.m.DatePicker;
             this.DP = new dpicker().addStyleClass("datePicker");
-            this.DP.placeAt(this);
+            this.DP.placeAt(shadowRoot);
         }
 
         
