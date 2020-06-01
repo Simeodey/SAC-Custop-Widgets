@@ -19,6 +19,7 @@
                 console.log('click');
                 var event = new Event("onClick");
                 this.dispatchEvent(event);})
+            this.init()
         }
         
 
