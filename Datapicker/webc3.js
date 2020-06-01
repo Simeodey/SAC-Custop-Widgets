@@ -2,9 +2,7 @@
     let shadowRoot;
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `   <style>	
-    body {
-
-    }
+  
     </style>  
 `;
 
@@ -25,9 +23,6 @@
 
         init() {
             if (this.children.length === 2) return;
-            if (!this.querySelector("link")) {
-                this.appendChild(tmpl.content.cloneNode(true));
-            }
             var dpicker = sap.m.DatePicker;
             this.DP = new dpicker({
                 change: function () {
