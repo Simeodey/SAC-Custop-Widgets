@@ -1,26 +1,44 @@
 (function () {
-    let shadowRoot;
     let tmpl = document.createElement('template');
-    tmpl.innerHTML = `   <style>	
-  
-    </style>  
+    tmpl.innerHTML = `    
 `;
 
     class DatePicker extends HTMLElement {
         constructor() {
             super();
-            shadowRoot = this.attachShadow({
+            _shadowRoot = this.attachShadow({
                 mode: "open"
             });
-            shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this.addEventListener("click", event => {
-                console.log('click');
-                var event = new Event("onClick");
-                this.dispatchEvent(event);})
-            this.init()
+            _shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            
         }
         
- onCustomWidgetAfterUpdate() {
+          connectedCallback(){
+            this.init(); 
+        }
+
+         
+        disconnectedCallback(){
+        
+        }
+
+         
+		onCustomWidgetBeforeUpdate(oChangedProperties) {
+
+		}
+
+       
+		onCustomWidgetAfterUpdate(oChangedProperties) {
+
+                this.init();
+            
+        }
+        
+        
+        onCustomWidgetDestroy(){
+        
+        }
+    
         init() {
             if (this.children.length === 2) return;
             var dpicker = sap.m.DatePicker;
@@ -48,7 +66,6 @@
             if (typeof (value) === "string") value = new Date(value);
             this.DP.setDateValue(value);
         }
-    }
     }
 
     customElements.define('ui5-datepicker', DatePicker);
