@@ -1,4 +1,5 @@
 (function () {
+	let shadowRoot;
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `    
 `;
@@ -6,10 +7,10 @@
     class DatePicker extends HTMLElement {
         constructor() {
             super();
-            _shadowRoot = this.attachShadow({
+            shadowRoot = this.attachShadow({
                 mode: "open"
             });
-            _shadowRoot.appendChild(tmpl.content.cloneNode(true));
+           shadowRoot.appendChild(tmpl.content.cloneNode(true));
             
         }
         
