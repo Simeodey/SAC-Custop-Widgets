@@ -44,7 +44,7 @@
             var dpicker = sap.m.DatePicker;
             this.DP = new dpicker().addStyleClass("datePicker");
             this.DP.placeAt(this);
-	console.log(this);
+	        console.log(this);
         }
 
         
