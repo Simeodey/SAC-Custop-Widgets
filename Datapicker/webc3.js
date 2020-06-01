@@ -20,7 +20,7 @@
             this.init()
         }
         
-
+ onCustomWidgetAfterUpdate() {
         init() {
             if (this.children.length === 2) return;
             var dpicker = sap.m.DatePicker;
@@ -48,6 +48,7 @@
             if (typeof (value) === "string") value = new Date(value);
             this.DP.setDateValue(value);
         }
+    }
     }
 
     customElements.define('ui5-datepicker', DatePicker);
