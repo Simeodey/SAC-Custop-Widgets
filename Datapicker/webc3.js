@@ -1,11 +1,9 @@
 (function () {
     let tmpl = document.createElement('template');
     tmpl.innerHTML = `
-    <style>
     <div id="ui5_content" name="ui5_content">
          <slot name="content"></slot>
         </div>  
-        </style>  
 `;
 
 
