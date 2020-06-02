@@ -13,7 +13,7 @@ content.slot = "content";
     class DatePicker extends HTMLElement {
         constructor() {
             super();
-            _shadowRoot = this.attachShadow({
+            let _shadowRoot = this.attachShadow({
                 mode: "open"
             });
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
