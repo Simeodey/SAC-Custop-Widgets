@@ -55,7 +55,8 @@ content.slot = "content";
                     this.dispatchEvent(new Event("onChange"));
                 }.bind(this)
             }).addStyleClass("datePicker");
-            this.DP.placeAt(this);
+	this.appendChild(content);
+            this.DP.placeAt(content);
         }
 
         fireChanged() {
