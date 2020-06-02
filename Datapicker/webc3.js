@@ -7,8 +7,7 @@
         </div>  
         </style>  
 `;
-let content = document.createElement('div');
-content.slot = "content";
+
 
     class DatePicker extends HTMLElement {
         constructor() {
@@ -47,7 +46,9 @@ content.slot = "content";
         
     
         init() {
-         
+         let content = document.createElement('div');
+	content.slot = "content";
+	this.appendChild(content);
             var dpicker = sap.m.DatePicker;
             this.DP = new dpicker({
                 change: function () {
@@ -55,7 +56,6 @@ content.slot = "content";
                     this.dispatchEvent(new Event("onChange"));
                 }.bind(this)
             }).addStyleClass("datePicker");
-	        this.appendChild(content);
             this.DP.placeAt(content);
         }
 
