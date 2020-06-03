@@ -30,7 +30,7 @@
 		}
 
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-           
+           console.log(1);
                 this.load();
            
         }
@@ -55,7 +55,7 @@
 		//this.DP.setPlaceholder("MMM d y");
 		//this.DP.setDisplayFormatType("dd.MM.YYYY");
 		console.log(this.DP.getDateValue());
-            this.DP.placeAt(content);
+            this.DP.placeAt(this);
 
         }
 
