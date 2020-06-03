@@ -18,8 +18,7 @@
         }
         
           connectedCallback(){
-            this._firstConnection = true;
-           this.load(); 
+          
         }
 
         disconnectedCallback(){
@@ -31,9 +30,9 @@
 		}
 
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-            if (this._firstConnection){
+           
                 this.load();
-            }
+           
         }
         
         onCustomWidgetDestroy(){
