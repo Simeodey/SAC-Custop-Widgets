@@ -20,7 +20,7 @@
         
           connectedCallback(){
             this._firstConnection = true;
-            this.init(); 
+            this.load(); 
         }
 
         disconnectedCallback(){
@@ -33,7 +33,7 @@
 
 		onCustomWidgetAfterUpdate(oChangedProperties) {
             if (this._firstConnection){
-                this.init();
+                this.load();
             }
         }
         
@@ -43,7 +43,7 @@
 
         
     
-        init() {
+        load() {
          let content = document.createElement('div');
 	content.slot = "content";
 	this.appendChild(content);
@@ -54,6 +54,7 @@
                     this.dispatchEvent(new Event("onChange"));
                 }.bind(this)
             }).addStyleClass("datePicker");
+		this.DP.setPlaceholder("d MMM y");
             this.DP.placeAt(content);
         }
 
