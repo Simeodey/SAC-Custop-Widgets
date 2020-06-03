@@ -15,10 +15,6 @@
             });
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
-            this.addEventListener("onChange", event => {
-            });
-            this.addEventListener("propertiesChanged", event => {
-            });
         }
         
           connectedCallback(){
