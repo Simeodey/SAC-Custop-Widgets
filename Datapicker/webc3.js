@@ -30,9 +30,8 @@
 		}
 
 		onCustomWidgetAfterUpdate(oChangedProperties) {
-           console.log(1);
-                this.load();
            
+                this.load();
         }
         
         onCustomWidgetDestroy(){
