@@ -25,7 +25,7 @@
         
           connectedCallback(){
             this._firstConnection = true;
-            this.load(); 
+           // this.load(); 
         }
 
         disconnectedCallback(){
@@ -68,7 +68,7 @@
 
         changed() {
             var properties = { date: this.DP.getDateValue() };
-		console.log(this[1]);
+		console.log(this);
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: properties
