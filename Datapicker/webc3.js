@@ -61,6 +61,7 @@
             }).addStyleClass("datePicker");
 		//this.DP.setPlaceholder("MMM d y");
 		//this.DP.setDisplayFormatType("dd.MM.YYYY");
+		console.log(this.DP.getDateValue());
             this.DP.placeAt(content);
 
         }
