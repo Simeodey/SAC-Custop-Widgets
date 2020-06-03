@@ -50,7 +50,7 @@
             var dpicker = sap.m.DatePicker;
             this.DP = new dpicker({
                 change: function () {
-                    this.firechanged();
+                    this.changed();
                     this.dispatchEvent(new Event("onChange"));
                 }.bind(this)
             }).addStyleClass("datePicker");
