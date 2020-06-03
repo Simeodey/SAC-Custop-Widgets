@@ -55,7 +55,7 @@
                 }.bind(this)
             }).addStyleClass("datePicker");
 		this.DP.setPlaceholder("MMM d y");
-		console.log(this.DP.getDisplayFormatType());
+		this.DP.setDisplayFormatType("MMM d y");
             this.DP.placeAt(content);
 
         }
