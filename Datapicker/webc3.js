@@ -59,7 +59,7 @@
                     this.dispatchEvent(new Event("onChange"));
                 }.bind(this)
             }).addStyleClass("datePicker");
-		this.DP.setPlaceholder("MMM d y");
+		//this.DP.setPlaceholder("MMM d y");
 		//this.DP.setDisplayFormatType("dd.MM.YYYY");
             this.DP.placeAt(content);
 
