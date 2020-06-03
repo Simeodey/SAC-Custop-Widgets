@@ -16,16 +16,14 @@
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
             this.addEventListener("onChange", event => {
-                console.log('Changed');
             });
             this.addEventListener("propertiesChanged", event => {
-                console.log('prop');
             });
         }
         
           connectedCallback(){
             this._firstConnection = true;
-           // this.load(); 
+           this.load(); 
         }
 
         disconnectedCallback(){
