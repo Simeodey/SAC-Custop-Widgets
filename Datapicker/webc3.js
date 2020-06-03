@@ -15,6 +15,9 @@
             });
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
             this._firstConnection = false;
+            this.addEventListener("onChange", event => {
+                console.log('Changed');
+            });
             
         }
         
@@ -50,7 +53,7 @@
             var dpicker = sap.m.DatePicker;
             this.DP = new dpicker({
                 change: function () {
-                    this.fireChanged();
+                    this.changed();
                     this.dispatchEvent(new Event("onChange"));
                 }.bind(this)
             }).addStyleClass("datePicker");
@@ -60,7 +63,7 @@
 
         }
 
-        fireChanged() {
+        changed() {
             var properties = { date: this.DP.getDateValue(),
                              format: 'yy-mm-dd' };
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
