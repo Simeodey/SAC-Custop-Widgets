@@ -25,7 +25,7 @@
         
           connectedCallback(){
             this._firstConnection = true;
-            this.load(); 
+            //this.load(); 
         }
 
         disconnectedCallback(){
