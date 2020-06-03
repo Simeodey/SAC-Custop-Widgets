@@ -18,7 +18,9 @@
             this.addEventListener("onChange", event => {
                 console.log('Changed');
             });
-            
+            this.addEventListener("propertiesChanged", event => {
+                console.log('prop');
+            });
         }
         
           connectedCallback(){
