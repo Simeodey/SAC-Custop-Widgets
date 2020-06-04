@@ -52,7 +52,7 @@
             }).addStyleClass("datePicker");
 		//this.DP.setPlaceholder("MMM d y");
 		//this.DP.setDisplayFormatType("dd.MM.YYYY");
-		console.log(this.DP.getDateValue());
+		console.log("1");
             this.DP.placeAt(content);
 
         }
