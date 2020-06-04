@@ -59,6 +59,7 @@
 
         changed() {
             var properties = { date: this.DP.getDateValue() };
+		console.log(this);
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: properties
