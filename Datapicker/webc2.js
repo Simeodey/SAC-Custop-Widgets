@@ -14,12 +14,14 @@
                 mode: "open"
             });
             _shadowRoot.appendChild(tmpl.content.cloneNode(true));
-            this._firstConnection = false;
+            this._firstConnection = true;
         }
         
           connectedCallback(){
+		  if(this._firstConnection){
 		  this.load();
-   
+   		this._firstConnection=false;
+		  }
         }
 
         disconnectedCallback(){
