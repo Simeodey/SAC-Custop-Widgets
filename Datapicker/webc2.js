@@ -1,32 +1,65 @@
 (function () {
     let tmpl = document.createElement('template');
-    tmpl.innerHTML = `       
+    tmpl.innerHTML = `
+    <div id="ui5_content" name="ui5_content">
+         <slot name="content"></slot>
+        </div>  
 `;
+
 
     class DatePicker extends HTMLElement {
         constructor() {
             super();
-            this.init();
+            let _shadowRoot = this.attachShadow({
+                mode: "open"
+            });
+            _shadowRoot.appendChild(tmpl.content.cloneNode(true));
+            this._firstConnection = false;
         }
         
+          connectedCallback(){
+		  this.load();
+   
+        }
 
-        init() {
-            if (this.children.length === 2) return;
-            if (!this.querySelector("link")) {
-                this.appendChild(tmpl.content.cloneNode(true));
-            }
+        disconnectedCallback(){
+        
+        }
+
+		onCustomWidgetBeforeUpdate(oChangedProperties) {
+
+		}
+
+		onCustomWidgetAfterUpdate(oChangedProperties) {
+        }
+        
+        onCustomWidgetDestroy(){
+        
+        }
+
+        
+    
+        load() {
+         let content = document.createElement('div');
+	content.slot = "content";
+	this.appendChild(content);
             var dpicker = sap.m.DatePicker;
             this.DP = new dpicker({
                 change: function () {
-                    this.fireChanged();
+                    this.changed();
                     this.dispatchEvent(new Event("onChange"));
                 }.bind(this)
             }).addStyleClass("datePicker");
-            this.DP.placeAt(this);
+		//this.DP.setPlaceholder("MMM d y");
+		//this.DP.setDisplayFormatType("dd.MM.YYYY");
+		console.log("1");
+            this.DP.placeAt(content);
+
         }
 
-        fireChanged() {
+        changed() {
             var properties = { date: this.DP.getDateValue() };
+		console.log(properties);
             this.dispatchEvent(new CustomEvent("propertiesChanged", {
                 detail: {
                     properties: properties
@@ -39,7 +72,6 @@
             if (typeof (value) === "string") value = new Date(value);
             this.DP.setDateValue(value);
         }
-
     }
 
     customElements.define('ui5-datepicker', DatePicker);
